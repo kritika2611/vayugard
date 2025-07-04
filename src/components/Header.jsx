@@ -65,6 +65,7 @@ const Header = () => {
         </div>
         <nav className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden mt-4`}>
           <ul className="space-y-2">
+           <li><Link to="/" className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Home</Link></li>
             <li><Link to="/about" className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">About Us</Link></li>
             <li><Link to="/services" className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Services</Link></li>
             <li><Link to="/products" className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 transition-colors">Products</Link></li>
