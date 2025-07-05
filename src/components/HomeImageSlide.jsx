@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const HomeImageSlider = ({ slides, interval = 3000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

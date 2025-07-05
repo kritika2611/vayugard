@@ -15,9 +15,16 @@ import IaqUnits from '../images/iaq-units.jpg';
 import TfaFiltration from '../images/tfa-filtration.jpg';
 import PpuUnits from '../images/ppu-units.jpg';
 import EnergyRecoveryUnits from '../images/energy-recovery-units.jpg';
+import EAC from '../images/EAC.png';
 import TechnologyTabs from '../components/TechnologyTabs';
 
 const products = [
+  {
+    id: 0,
+    title: 'Electronic Air Cleaner',
+    description: 'the Vayugard EAC delivers clean, breathable air with capacities of 1000–2000 CFM (up to 3400 m³/hr). It captures ultra-fine particles as small as 0.01 microns using heavy-duty, washable commercial cells and pre-filters. A solid-state power supply ensures long-lasting reliability, while interconnectable units allow scalable configurations. Built-in test functionality makes system checks effortless, ensuring consistent air purification at all times.',
+    image: EAC,
+  },
   {
     id: 1,
     title: 'Double Skin Air Handling Units',
@@ -42,12 +49,6 @@ const products = [
     description: 'Energy-efficient AHUs equipped with EC fans for precise control and reduced energy consumption, suitable for modern applications.',
     image: AhuAcFans,
   },
-  // {
-  //   id: 5,
-  //   title: 'Fan Coil Units',
-  //   description: 'Versatile fan coil units designed to deliver heating and cooling solutions with minimal energy usage, ensuring year-round comfort.',
-  //   image: FanCoilUnits,
-  // },
   {
     id: 6,
     title: 'AHUs with Dehumidifier',
@@ -124,6 +125,9 @@ const Products = () => {
           />
         ))}
       </div>
+      <section className='mt-16 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md'>
+        <TechnologyTabs/>
+      </section>
     </div>
   );
 };

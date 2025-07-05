@@ -12,7 +12,23 @@ import Background2 from '../images/Background/centralAcBackground.jpg';
 import Background3 from '../images/Background/acBackground2.jpg';
 import AirCleaner from '../images/Background/AirCleanerBg.webp';
 import TechnologyTabs from '../components/TechnologyTabs';
-import { BackgroundSnow, BottomLine, Gradient } from '../components/SnowFlakes';
+import { motion } from 'framer-motion';
+import {
+  ShieldCheck,
+  Wrench,
+  Sparkles,
+  Leaf,
+  Users,
+  Building2,
+} from 'lucide-react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '../components/card';
+
 
 const services = [
   {
@@ -62,16 +78,111 @@ const slides = [
     title: 'Smart Air Management',
     description: 'Enjoy intelligent air quality monitoring and control for optimal health, comfort, and productivity.'
   },
-]
+];
+
+const features = [
+  {
+    icon: <ShieldCheck className="w-6 h-6 text-[#076499]" />,
+    title: 'Proven Expertise',
+    description:
+      'Backed by 30+ years of experience across healthcare, defence, hospitality, and industrial sectors.',
+  },
+  {
+    icon: <Sparkles className="w-6 h-6 text-[#076499]" />,
+    title: 'Innovative Technology',
+    description:
+      'Cutting-edge, filterless purification systems designed to deliver clean and safe air.',
+  },
+  {
+    icon: <Leaf className="w-6 h-6 text-[#076499]" />,
+    title: 'Sustainable Approach',
+    description:
+      'Energy-efficient systems focused on minimizing environmental impact and operational costs.',
+  },
+  {
+    icon: <Wrench className="w-6 h-6 text-[#076499]" />,
+    title: 'End-to-End Solutions',
+    description:
+      'From design and engineering to installation and maintenance—complete HVACR ownership.',
+  },
+  {
+    icon: <Users className="w-6 h-6 text-[#076499]" />,
+    title: 'Customer-Centric',
+    description:
+      'Tailored solutions that prioritize comfort, air quality, and long-term client satisfaction.',
+  },
+  {
+    icon: <Building2 className="w-6 h-6 text-[#076499]" />,
+    title: 'Trusted by Industries',
+    description:
+      'Deployed across large-scale facilities and trusted by leading institutions nationwide.',
+  },
+];
 
 const Home = () => {
   return (
     <>
     <div className="space-y-12">
-    <HomeImageSlider slides={slides} interval={4500}/>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        className="text-center space-y-4"
+      >
+         <motion.h1
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 1.5, ease: 'easeOut' },
+              },
+            }}
+            className="text-5xl md:text-6xl font-extrabold tracking-wide text-[#076499] dark:text-gray-100"
+            style={{
+              textShadow: '1px 2px 4px rgba(0, 0, 0, 0.2)', // soft shadow for depth
+            }}
+          >
+            The Future of Air is Here
+            {/* <h1 className="text-5xl font-bold text-[#076499] dark:text-gray-100">Welcome to Vayugard</h1> */}
+          </motion.h1>
+
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 2, delay:0.1 , ease: 'easeOut' },
+              },
+            }}
+            className="text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
+          >
+            Join the air-tech revolution redefining HVACR for a healthier tomorrow
+          </motion.p>
+      </motion.div>
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        <HomeImageSlider slides={slides} interval={4500}/>
+      </motion.div>
             
-      <section className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#076499] dark:text-gray-200 mb-6"> About Us </h1>
+      <motion.section initial="hidden" animate="visible" className="text-center">
+        <motion.h1
+            variants={{
+              hidden: { opacity: 0, y:2, scale: 0.9 },
+              visible: {
+                opacity: 1,
+                scale: 1,
+                transition: { duration: 2, delay:0.1 , ease: 'easeOut' },
+              },
+            }}
+            className="text-lg md:text-5xl font-bold text-[#396668] dark:text-gray-200 mb-6"
+          >
+         About Us 
+         </motion.h1>
         <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-6xl mx-auto">
         Founded in 2024 by industry veteran Pawan Saini, who brings over 30 years of experience in the HVACR (Heating, Ventilation, Air Conditioning, and Refrigeration) domain, Vayugard is rapidly carving a niche as a trusted leader in providing end-to-end HVACR solutions.
 
@@ -88,7 +199,7 @@ const Home = () => {
         </div>
         </p>
         {/* <Link style={{ pointerEvents: "auto", zIndex: 10 }} to="/about" className="bg-blue-500 dark:bg-blue-400 text-white px-6 py-3 rounded-md hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors text-lg font-semibold">Know More</Link> */}
-      </section>
+      </motion.section>
 
       <section className="bg-gradient-to-b bg-gray-50 dark:bg-[#0C0F1B] py-12 px-6 md:px-12 rounded-2xl shadow-lg">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
@@ -158,22 +269,30 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-semibold text-[#076499] dark:text-gray-200 mb-6 text-center">Why Choose Vayugard?</h2>
-        <ul className="list-none space-y-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          <li className="flex items-center">
-            <svg className="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-            Expertise in healthcare, hospitality, defence, and more
-          </li>
-          <li className="flex items-center">
-            <svg className="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-            Innovative and sustainable HVACR solutions
-          </li>
-          <li className="flex items-center">
-            <svg className="w-6 h-6 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-            End-to-end services from design to commissioning
-          </li>
-        </ul>
+      <section className="py-5 px-4 md:px-10 dark:bg-[#0f172a]">
+        <h2 className="text-4xl text-center font-bold text-[#076499] dark:text-gray-200 mb-12">
+          Why Choose Vayugard?
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <Card
+              key={index}
+              className="transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1e293b]"
+            >
+              <CardHeader className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-[#E0FCEC] dark:bg-[#334155] rounded-full flex items-center justify-center">
+                  {feature.icon}
+                </div>
+                <CardTitle className="text-lg text-gray-800 dark:text-white">{feature.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm text-gray-600 dark:text-gray-400">
+                  {feature.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </section>
     </div>
     </>
