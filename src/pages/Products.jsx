@@ -32,12 +32,12 @@ const products = [
     description: 'Advanced AHUs designed with double-skin construction for enhanced insulation and efficiency. Ideal for maintaining precise air quality in critical environments.',
     image: DoubleSkinAirHandlingUnits,
   },
-  {
-    id: 2,
-    title: 'Pharma / Cleanroom AHU',
-    description: 'Specialized air handling units tailored for pharmaceutical and cleanroom applications, ensuring stringent air quality and sterility standards.',
-    image: PharmaCleanroomAhu,
-  },
+  // {
+  //   id: 2,
+  //   title: 'Pharma / Cleanroom AHU',
+  //   description: 'Specialized air handling units tailored for pharmaceutical and cleanroom applications, ensuring stringent air quality and sterility standards.',
+  //   image: PharmaCleanroomAhu,
+  // },
   {
     id: 3,
     title: 'Hi wall fan coil unit',
@@ -50,12 +50,12 @@ const products = [
     description: 'Energy-efficient AHUs equipped with EC fans for precise control and reduced energy consumption, suitable for modern applications.',
     image: AhuAcFans,
   },
-  {
-    id: 6,
-    title: 'AHUs with Dehumidifier',
-    description: 'Air handling units integrated with dehumidifiers to manage humidity levels in specialized environments like laboratories and production facilities.',
-    image: AhuHumidifier,
-  },
+  // {
+  //   id: 6,
+  //   title: 'AHUs with Dehumidifier',
+  //   description: 'Air handling units integrated with dehumidifiers to manage humidity levels in specialized environments like laboratories and production facilities.',
+  //   image: AhuHumidifier,
+  // },
   {
     id: 7,
     title: 'Air-Washers (single/ Double / Triple stage)',
@@ -98,12 +98,12 @@ const products = [
     description: 'Advanced TFA units featuring chemical, dust, microbial filtration, and ESP filters to meet stringent air quality requirements.',
     image: TfaFiltration,
   },
-  {
-    id: 14,
-    title: 'PPU Positive pressurization units with Chemical Filtration',
-    description: 'Specialized units with chemical filtration to combat harmful gases like SOx and NOx, ideal for industrial applications.',
-    image: PpuUnits,
-  },
+  // {
+  //   id: 14,
+  //   title: 'PPU Positive pressurization units with Chemical Filtration',
+  //   description: 'Specialized units with chemical filtration to combat harmful gases like SOx and NOx, ideal for industrial applications.',
+  //   image: PpuUnits,
+  // },
   {
     id: 15,
     title: 'Energy Recovery Units with HRW',
