@@ -35,7 +35,7 @@ const Footer = () => {
             <p>Kushak Hiranki, North West,</p>
             <p>Delhi-110036</p>
             <p>Phone: +91-8744050073</p>
-            <p>Email: sainipawan652@gmail.com</p>
+            <p>Email: sales@vayugard.com</p>
           </div>
         </div>
         <div className="mt-8 text-center">

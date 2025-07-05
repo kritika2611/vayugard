@@ -9,10 +9,10 @@ const Contact = () => {
     setLoading(true); // Disable the button
 
     emailjs.sendForm(
-      'service_dbcg7zs',
-      'template_30jrn17',
+      'service_2qh01vv',
+      'template_0uns8or',
       e.target,
-      'ZR_TJPHSOBUDQeuco'
+      '7lVMJPGzc_zUWw3ow'
     )
     .then((result) => {
       console.log('Email sent:', result.text);
