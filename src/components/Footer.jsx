@@ -14,7 +14,7 @@ const Footer = () => {
               <img
                 src={theme === 'light' ? LogoVayuguard : LogoVayuguard}
                 alt="Vayugurad Engineers Logo"
-                className="h-[250px] w-auto mb-4"
+                className="h-[200px] md:h-[200px] sm:h-[100px] w-auto mb-4"
               />
             </Link>
           </div>
