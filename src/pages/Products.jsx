@@ -40,7 +40,7 @@ const products = [
   // },
   {
     id: 3,
-    title: 'Hi wall fan coil unit',
+    title: 'Fan coil unit',
     description: 'Compact and efficient units designed for residential and commercial spaces, providing optimal cooling and heating solutions.',
     image: HiWallFcu,
   },

@@ -66,7 +66,7 @@ const Contact = () => {
             <p><strong>Address:</strong><br />
               VAYUGARD AIRCONDITIONING PVT. LTD<br />
               Regd Off: H.No 68, Khasra No 177, <br />
-              (Mata Wala Park), Kushak Hiranki, North West,<br />
+              Kushak Hiranki, North West,<br />
               Delhi: 110036
             </p>
             <p><strong>Phone:</strong><br />+91-8744050073</p>
