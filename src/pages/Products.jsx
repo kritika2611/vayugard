@@ -17,6 +17,7 @@ import PpuUnits from '../images/ppu-units.jpg';
 import EnergyRecoveryUnits from '../images/energy-recovery-units.jpg';
 import EAC from '../images/EAC.png';
 import TechnologyTabs from '../components/TechnologyTabs';
+import { motion } from 'framer-motion';
 
 const products = [
   {
@@ -114,7 +115,15 @@ const products = [
 const Products = () => {
   return (
     <div className="container mx-auto">
-      <h1 className="text-4xl text-center font-bold text-[#076499]  dark:text-[#BFDBFE] mb-8">Our Products</h1>
+      <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+            className="text-center space-y-6 max-w-5xl mx-auto"
+      >
+        <h1 className="text-4xl text-center font-bold text-[#076499]  dark:text-[#BFDBFE] mb-8">Our Products</h1>
+      </motion.div>
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <ProductCard

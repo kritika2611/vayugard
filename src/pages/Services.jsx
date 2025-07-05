@@ -6,6 +6,7 @@ import VentilationSystem from '../images/ventilation_systems.jpg';
 import HvacSystem from '../images/hvac_systems.jpg';
 import EmergencyRepair from '../images/emergency_repairs.jpg';
 import EnergyEfficient from '../images/energy_efficient.jpg';
+import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -49,7 +50,15 @@ const services = [
 const Services = () => {
   return (
     <div className="space-y-8">
-      <h1 className="text-4xl text-center font-bold text-[#076499]  dark:text-[#BFDBFE] mb-8">Our Services</h1>
+      <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+            className="text-center space-y-6 max-w-5xl mx-auto"
+      >
+        <h1 className="text-4xl text-center font-bold text-[#076499]  dark:text-[#BFDBFE] mb-8">Our Services</h1>
+      </motion.div>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <ServiceCard
