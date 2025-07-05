@@ -137,7 +137,7 @@ const Home = () => {
                 transition: { duration: 1.5, ease: 'easeOut' },
               },
             }}
-            className="text-5xl md:text-6xl font-extrabold tracking-wide text-[#076499] dark:text-gray-100"
+            className="text-4xl sm:text-3xl md:text-6xl font-extrabold tracking-wide text-[#076499] dark:text-gray-100"
             style={{
               textShadow: '1px 2px 4px rgba(0, 0, 0, 0.2)', // soft shadow for depth
             }}
@@ -155,7 +155,7 @@ const Home = () => {
                 transition: { duration: 2, delay:0.1 , ease: 'easeOut' },
               },
             }}
-            className="text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
+            className="text-xl sm:text-lg md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
           >
             Join the air-tech revolution redefining HVACR for a healthier tomorrow
           </motion.p>
@@ -179,7 +179,7 @@ const Home = () => {
                 transition: { duration: 2, delay:0.1 , ease: 'easeOut' },
               },
             }}
-            className="text-lg md:text-5xl font-bold text-[#396668] dark:text-gray-200 mb-6"
+            className="text-2xl md:text-5xl font-bold text-[#396668] dark:text-gray-200 mb-6"
           >
          About Us 
          </motion.h1>
