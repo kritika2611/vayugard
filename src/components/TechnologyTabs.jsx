@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Check, AirVent, CircleDot, Zap, Shield, Sparkles, Wind, Filter, MagnetIcon } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs';
-import MagneticFilteration from '../images/Background/MagneticFilteration.png';
+import MagneticFilteration from '../images/MagneticFilteration.png';
 import UVGI from '../images/UVGI.jpg';
 import PHIO from '../images/PHIO.png';
 import ColdPlasma from '../images/ColdPlasma.jpg';
