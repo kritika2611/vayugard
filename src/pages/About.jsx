@@ -2,6 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HeartHandshake, Target, ShieldCheck, Thermometer, Droplets, Leaf } from 'lucide-react';
 import AboutImage from '../images/aboutUs.jpg'; 
+import NestleLogo from '../images/Nestle2.png';
+import DtuLogo from '../images/DTU.png';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '../components/card';
 
 const About = () => {
   return (
@@ -102,6 +111,41 @@ const About = () => {
                   {item.icon}
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 text-base">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        <section className="relative overflow-hidden pt-6 pb-10 px-6 md:px-12">
+          <h2 className="relative z-10 text-4xl text-center font-semibold text-[#396668] dark:text-blue-200 mb-14">
+            Our Clientele
+          </h2>
+
+          <div className="relative z-10 grid gap-8 sm:grid-cols-2 max-w-6xl mx-auto">
+            {[ // you can easily push more objects into this list later
+              { logo: NestleLogo, alt: 'Nestlé India Logo', name: 'Nestlé India Ltd.', place: 'Manesar, Haryana' },
+              { logo: DtuLogo,    alt: 'DTU Logo',          name: 'Delhi Technological University', place: 'Delhi, India' },
+            ].map((c, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -6, scale: 1.03 }}
+                transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+              >
+                <Card className="backdrop-blur-lg/30 bg-white/60 dark:bg-[#1e293b]/60 border border-white/30 dark:border-white/10 shadow-xl">
+                  <CardHeader className="flex flex-col items-center space-y-4 pb-2">
+                    {/* bigger logo inside a ring */}
+                    <div className="p-4 rounded-full bg-white dark:bg-[#273344] shadow-inner">
+                      <img src={c.logo} alt={c.alt} className="w-32 h-32 object-contain" />
+                    </div>
+                    <CardTitle className="text-center text-xl text-gray-800 dark:text-gray-100">
+                      {c.name}
+                    </CardTitle>
+                    <CardDescription className="text-center text-sm text-gray-600 dark:text-gray-400">
+                      {c.place}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent />
+                </Card>
               </motion.div>
             ))}
           </div>

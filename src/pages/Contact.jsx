@@ -70,7 +70,7 @@ const Contact = () => {
               Delhi: 110036
             </p>
             <p><strong>Phone:</strong><br />+91-8744050073</p>
-            <p><strong>Email:</strong><br />sainipawan652@gmail.com</p>
+            <p><strong>Email:</strong><br />sales@vayugard.com</p>
             <p><strong>Hours:</strong><br />Monday - Friday: 9:00 AM - 6:00 PM</p>
           </div>
         </div>
